@@ -1,5 +1,5 @@
 // 이 방식처럼 props.color를 무조건 넘겨 받는 다는 가정하에 코드를 작성하면 치명적일 수 있으므로 기본값을 설정해야됨.
-// const Button = (props) => { // 매개변수로 props 넘겨받기. 다른 이름 가능
+// const Button = (props) => { // 매개변수로 props 넘겨받기. 객체 형태. 다른 이름 가능
 //     console.log(props);
 //     return (
 //         <button style={{color: props.color}}>
@@ -10,8 +10,23 @@
 
 // 구조 분해 방식으로 props의 기본값 설정하기(19버전 방식).
 const Button = ({children, text, color = "black"}) => { // 태그 사이로 전달한 prop은 children이라는 이름으로 넘겨 받는다.
+    const onClickButton = (e) => {
+        console.log(e);
+        console.log(text);
+    }
+
     return (
-        <button style={{color: color}}>
+        <button 
+            // 이벤트 핸들러 방법1.
+            // onClick={() => {
+            //     console.log(text);
+            // }}
+
+            // 이벤트 핸들러 방법2. - 함수로 만들어 연결
+            onClick={onClickButton}
+
+            style={{color: color}}
+        >
             {text} - {color}
             {children}
         </button>

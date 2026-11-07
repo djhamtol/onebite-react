@@ -25,7 +25,7 @@ function App() {
 
       {/* 방법1. prop 이름 지정해서 전달하기 */}
       {/* <Button text={"메일"} color={"red"} a={1}/> 방법1-1. js값을 props로 전달 */}
-      <Button {...buttonProps} /> {/* 방법2-1. 스프레드 연산자를 통해 buttonProps 객체 전개 후 전달 */}
+      <Button {...buttonProps} /> {/* 방법2-1. 스프레드 연산자를 통해 buttonProps 객체 전개 후 전달, 여기서 {}는 jsx의 {}임*/}
 
       <Button text={"카페"}/>
       <Button text={"블로그"}> {/* prop을 text라는 이름으로 전달 */}
