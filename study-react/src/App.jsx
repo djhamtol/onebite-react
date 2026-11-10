@@ -3,6 +3,7 @@ import { useState } from "react";
 
 // 자식 컴포넌트들은 자신이 갖는 state의 값이 변경되지 않아도 부모로부터 받은 props가 변경되면 컴포넌트 함수가 재호출되어 리렌더링 된다.
 const Bulb = ({ light }) => {
+  console.log(light); // count 버튼을 클릭했을 때도 콘솔이 찍힘. 부모가 리렌더링되면 자식도 리렌더링되기 때문. (불필요한 리렌더링. 컴포넌트 분리 필요)
   return (
     <div>
       {light === "on" ? (
@@ -26,7 +27,7 @@ function App() {
     // return문 안에서 컴포넌트들 명시(html 반환)
     <>
       <div>
-        <Bulb light={light} /> // 자식 컴포넌트 호출. state값이 변경되어 넘겨주는 props값이 변한다.
+        <Bulb light={light} /> {/* 자식 컴포넌트 호출. state값이 변경되어 넘겨주는 props값이 변한다. */}
         <button
           onClick={() => {
             setLight(light === "on" ? "off" : "on"); 
