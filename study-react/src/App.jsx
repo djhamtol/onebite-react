@@ -1,7 +1,5 @@
 import "./App.css";
-import Bulb from "./components/Bulb";
-import Counter from "./components/Counter";
-// import { useState } from "react";
+import Register from "./components/Register";
 
 // Header 컴포넌트의 부모 컴포넌트 , Root 컴포넌트 (모든 컴포넌트들의 뿌리)
 // 컴포넌트명은 대문자로 시작
@@ -12,8 +10,7 @@ function App() {
   return (
     // return문 안에서 컴포넌트들 명시(html 반환)
     <>
-      <Bulb />
-      <Counter />
+      <Register />
     </>
   );
 }
