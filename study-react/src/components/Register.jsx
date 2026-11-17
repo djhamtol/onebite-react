@@ -97,7 +97,7 @@ const Register = () => {
           } /* ref속성을 사용하여 Ref객체에 input이라는 DOM요소 저장하기 (Ref를 사용하는 이유2) */
           name="name"
           value={input.name}
-          onClick={onChange}
+          onChange={onChange}
           placeholder="이름"
         />
         {input.name}
