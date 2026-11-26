@@ -24,7 +24,7 @@ function reducer(state, action) {
 
 const Exam = () => {
   // dispatch: 발송하다
-  // -> 상태 변화가 있어야 한다는 사실을 알리는, 발송하는 함수
+  // -> reducer함수에게 상태 변화가 있어야 한다는 사실을 알리는, 발송하는 함수
   const [state, dispatch] = useReducer(reducer, 0);
 
   const onClickPlus = () => {
